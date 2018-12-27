@@ -8,8 +8,9 @@ class Post < ActiveRecord::Base
 
   def clickbait
     if title
+          binding.pry
       @clickbait_arr.any?{|word| word.match title}
-      binding.pry
+
     end
   end
 end

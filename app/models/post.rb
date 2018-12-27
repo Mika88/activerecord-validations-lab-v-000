@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
   def clickbait
     if title
       if !title.include?("Won't Believe") || !title.include?("Secret") || !title.include?("Top") || !title.include?("Guess")
-        false
+        true
       end
     end
   end

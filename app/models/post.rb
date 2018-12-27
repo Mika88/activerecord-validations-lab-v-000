@@ -10,6 +10,8 @@ class Post < ActiveRecord::Base
     if title
       if title.include?("Won't Believe") || title.include?("Secret") || title.include?("Top") || title.include?("Guess")
         true
+      else
+        false
       end
     end
   end

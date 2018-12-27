@@ -7,12 +7,9 @@ class Post < ActiveRecord::Base
 
 
   def clickbait
+    clickbait_arr = ["Won't Believe", "Secret", "Top", "Guess"]
     if title
-      if title.include?("Won't Believe") || title.include?("Secret") || title.include?("Top") || title.include?("Guess")
-        true
-      else
-        false
-      end
+      clickbait_arr.any?{|word| title.include?(word)}
     end
   end
 end

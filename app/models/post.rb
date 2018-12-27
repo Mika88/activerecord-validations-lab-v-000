@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 
   def clickbait
     if title
-      @clickbait_arr.any?{|word| title.include?(word)}
+      @clickbait_arr.any?{|word| word.match title}
     end
   end
 end

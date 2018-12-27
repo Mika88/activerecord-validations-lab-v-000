@@ -6,10 +6,10 @@ class Post < ActiveRecord::Base
   validate :clickbait
 
   clickbait_arr = ["Won't Believe", "Secret", "Top", "Guess"]
-  
+
     def clickbait
       if title
-        clickbait_arr.any?{|word| word.match title} 
+        clickbait_arr.any?{|word| word.match title}
       end
     end
 end
